@@ -1,4 +1,4 @@
-// app/layout.tsx
+
 // import React from 'react';
 // import './globals.css'; // Import global styles if needed
 // import { AppProvider } from '@toolpad/core/AppProvider';
@@ -72,7 +72,7 @@
 
 
 
-// app/layout.tsx
+// // app/layout.tsx
 import React from 'react';
 
 export default function RootLayout({

@@ -1,58 +1,39 @@
+
+"use client";
+
 import React from 'react';
-import { Grid, Typography, Box, Link } from '@mui/material';
+import { Layout } from 'antd';
 
-export default function Footer() {
+const { Footer } = Layout;
+
+const FooterComponent = () => {
     return (
-        <Box sx={{ backgroundColor: '#f5f5f5', py: 6, mt: 8 }}>
-            <Grid container spacing={3} justifyContent="center">
-                <Grid item xs={12} sm={3}>
-                    <Typography variant="h6" gutterBottom>
-                        <span style={{ color: '#7b61ff', fontWeight: 'bold' }}>AlwaysApply</span>
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                        Call now: <Link href="tel:+919897760878" underline="none" color="secondary">+91 98977 60878</Link>
-                    </Typography>
-                    <Typography variant="body2">
-                        495 Chanchal Chowk Street, Near Roti Doot Chori, New Delhi, Delhi 110006, India
-                    </Typography>
-                </Grid>
-
-                <Grid item xs={12} sm={2}>
-                    <Typography variant="h6" gutterBottom>Quick Link</Typography>
-                    <Link href="#" underline="none" color="inherit"><Typography>About</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Contact</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Admin</Typography></Link>
-                </Grid>
-
-                <Grid item xs={12} sm={2}>
-                    <Typography variant="h6" gutterBottom>Candidate</Typography>
-                    <Link href="#" underline="none" color="inherit"><Typography>Browse Jobs</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Browse Employers</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Candidate Dashboard</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Saved Jobs</Typography></Link>
-                </Grid>
-
-                <Grid item xs={12} sm={2}>
-                    <Typography variant="h6" gutterBottom>Employers</Typography>
-                    <Link href="#" underline="none" color="inherit"><Typography>Post a Job</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Browse Candidates</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Employers Dashboard</Typography></Link>
-                    <Link href="#" underline="none" color="inherit"><Typography>Applications</Typography></Link>
-                </Grid>
-            </Grid>
-
-            {/* Social Media & Copyright */}
-            <Box sx={{ textAlign: 'center', mt: 4 }}>
-                <Typography variant="body2" color="textSecondary" gutterBottom>
-                    &copy; 2023 AlwaysApply - Job Portal. All Rights Reserved.
-                </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                    <Link href="#" sx={{ mx: 1 }}><img src="/facebook-icon.png" alt="Facebook" /></Link>
-                    <Link href="#" sx={{ mx: 1 }}><img src="/twitter-icon.png" alt="Twitter" /></Link>
-                    <Link href="#" sx={{ mx: 1 }}><img src="/instagram-icon.png" alt="Instagram" /></Link>
-                    <Link href="#" sx={{ mx: 1 }}><img src="/youtube-icon.png" alt="YouTube" /></Link>
-                </Box>
-            </Box>
-        </Box>
+        <Footer style={{ textAlign: 'center', background: '#f7f9fc', padding: '40px 0' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <div>
+                    <h4>AlwaysApply</h4>
+                    <p>Call now: +91 8917770678</p>
+                    <p>Address: 456 Chauri Bazar, New Delhi</p>
+                </div>
+                <div>
+                    <h4>Quick Link</h4>
+                    <p>Contact</p>
+                    <p>Admin</p>
+                </div>
+                <div>
+                    <h4>Candidate</h4>
+                    <p>Browse Jobs</p>
+                    <p>Dashboard</p>
+                </div>
+                <div>
+                    <h4>Employers</h4>
+                    <p>Post a Job</p>
+                    <p>Manage Applications</p>
+                </div>
+            </div>
+            <p>© 2024 AlwaysApply - Job Portal. All Rights Reserved</p>
+        </Footer>
     );
-}
+};
+
+export default FooterComponent;
