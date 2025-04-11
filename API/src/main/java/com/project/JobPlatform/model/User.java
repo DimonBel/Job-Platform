@@ -23,6 +23,7 @@ public class User {
 
     private  String loginAs;
 
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Profile profile;
 
@@ -126,6 +127,12 @@ public class User {
     public String getEmail() {
         return email;
     }
+
+    public String getEmailId() {
+        return email;
+    }
+
+
 
     public void setEmail(String email) {
         this.email = email;

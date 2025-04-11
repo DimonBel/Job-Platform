@@ -29,6 +29,18 @@ public class Company {
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true) // Ensure this maps to 'company' in Review
     private List<Review> reviews;
 
+
+    public void addJob(JobListing job) {
+        jobListings.add(job);
+        job.setCompany(this);
+    }
+
+    public void removeJob(JobListing job) {
+        jobListings.remove(job);
+        job.setCompany(null);
+    }
+
+
     public Long getCompanyId() {
         return companyId;
     }
