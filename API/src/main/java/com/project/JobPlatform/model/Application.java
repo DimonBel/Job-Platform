@@ -10,12 +10,13 @@ import java.util.Date;
 @Table(name = "applications")
 public class Application {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long applicationId;
 
     private String cover_letter;
+
+    private String status;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -31,6 +32,7 @@ public class Application {
     @ManyToOne
     @JoinColumn(name = "joblisting_id")
     private JobListing jobListing;
+
 
 
     @ManyToOne
@@ -83,5 +85,21 @@ public class Application {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public JobListing getJobListing() {
+        return jobListing;
+    }
+
+    public void setJobListing(JobListing jobListing) {
+        this.jobListing = jobListing;
     }
 }
