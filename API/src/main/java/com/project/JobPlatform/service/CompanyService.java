@@ -19,6 +19,9 @@ public class CompanyService {
     @Autowired
     private CompanyRepository companyRepository;
 
+    public Company createCompany(Company company) {
+        return companyRepository.save(company);
+    }
 
     public JobListing addJob(Long clientId, JobListing job) {
         Company client = companyRepository.findById(clientId)
@@ -28,12 +31,11 @@ public class CompanyService {
         return jobListingRepository.save(job);
     }
 
-
     public JobListing updateJob(Long companyId, Long jobId, JobListing updatedJob) {
         JobListing job = jobListingRepository.findById(jobId)
                 .orElseThrow(() -> new CustomExceptions("Job not found"));
 
-        if (!job.getCompany().equals(companyId)) {
+        if (!job.getCompany().getCompanyId().equals(companyId)) {
             throw new CustomExceptions("Unauthorized operation");
         }
 
