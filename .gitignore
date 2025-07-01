@@ -1,0 +1,35 @@
+# Java / Maven / Spring Boot
+API/target/
+API/.classpath
+API/.project
+API/.settings/
+API/.idea/
+API/*.iml
+API/.mvn/
+API/logs/
+API/.env
+
+# Node.js / Next.js / npm / yarn
+frontend/node_modules/
+frontend/.next/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/.turbo/
+frontend/.eslintcache
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# IDEs
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.vscode/
+.idea/
+*.iml
