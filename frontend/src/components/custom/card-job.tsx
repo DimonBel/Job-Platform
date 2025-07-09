@@ -19,12 +19,12 @@ export function FindJobCard() {
             style={{
                 backgroundImage: "url('/d7419b2f-8844-49f9-9690-f5a8982945c2_removalai_preview.png')",
                 backgroundSize: "contain",
-                backgroundPosition: "calc(100% - 200px) center", // Сдвиг влево
+                backgroundPosition: "calc(100% - 350px) center", // Сдвиг влево
                 backgroundRepeat: "no-repeat",
                 backgroundColor: "#f8fafc"
             }}
         >
-            <div className="relative z-10 flex items-center justify-start pl-8 lg:pl-16">
+            <div className="relative z-10 flex items-center justify-start pl-8 lg:pl-45">
                 <div className="w-full max-w-2xl">
                     <div className="mb-8">
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
